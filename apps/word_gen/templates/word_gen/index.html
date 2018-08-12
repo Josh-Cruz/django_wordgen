@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <form action="/reset" method="post">
+         {% csrf_token %}
+        <h2>random word attempt #:{{request.session.counter}}</h2>
+        <fieldset>
+            <h1>{{word}}</h1>
+        </fieldset>
+        <button type="submit" >Generate</button>
+        
+    </form>
+</body>
+</html>
